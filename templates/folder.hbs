@@ -25,3 +25,11 @@
     </fieldset>
   </form>
 </div>
+
+<div class="container">
+  {{#each item in emails}}
+  <ul>
+    <li>{{item.to}}{{item.subject}}</li>
+  </ul>
+  {{/each}}
+</div>
