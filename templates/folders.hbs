@@ -17,7 +17,7 @@
 <div class="container">
   {{#each}}
   <ul>
-    <li>{{name}}</li>
+    <li>{{#link-to 'folder' this.id}}{{name}}{{/link-to}}</li>
   </ul>
   {{/each}}
 </div>
