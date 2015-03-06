@@ -1,4 +1,5 @@
 Email.FoldersController = Ember.ArrayController.extend({
+
   actions: {
     save: function() {
       var newFolder = this.store.createRecord('folder', {

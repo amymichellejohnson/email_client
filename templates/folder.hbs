@@ -11,7 +11,7 @@
       <div class="form-group">
         <label for="subject" class="col-lg-2 control-label">Subject</label>
         <div class="col-lg-10">
-          {{input type="password" class="form-control" id="subject" value=subject placeholder="Subject"}}
+          {{input type="text" class="form-control" id="subject" value=subject placeholder="Subject"}}
         </div>
       </div>
       <div class="form-group">
@@ -29,7 +29,7 @@
 <div class="container">
   {{#each item in emails}}
   <ul>
-    <li>{{item.to}}{{item.subject}}</li>
+    <li>{{item.to}}{{#link-to 'email' item.id}}{{item.subject}}{{/link-to}}</li>
   </ul>
   {{/each}}
 </div>
