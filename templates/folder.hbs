@@ -1,0 +1,27 @@
+<div class="container">
+  <form class="form-horizontal">
+    <fieldset>
+      <legend>New Message</legend>
+      <div class="form-group">
+        <label for="to" class="col-lg-2 control-label">To</label>
+        <div class="col-lg-10">
+          {{input type="text" class="form-control" id="to" value=to placeholder="Recipients"}}
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="subject" class="col-lg-2 control-label">Subject</label>
+        <div class="col-lg-10">
+          {{input type="password" class="form-control" id="subject" value=subject placeholder="Subject"}}
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="textArea" class="col-lg-2 control-label">Textarea</label>
+        <div class="col-lg-10">
+          {{textarea class="form-control" rows="3" value=message}}
+          <br>
+          <button class="btn btn-primary" {{action 'save'}}>Send</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>
