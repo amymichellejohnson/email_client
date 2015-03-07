@@ -17,7 +17,7 @@ form {
   .navbar-collapse.collapse {
     display: block !important;
     width: auto !important;
-    padding-bottom: 0;
+    /*padding-bottom: 0;*/
     overflow: visible !important;
   }
   .navbar-collapse.in {
