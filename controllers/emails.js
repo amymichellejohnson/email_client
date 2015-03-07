@@ -24,6 +24,11 @@ Email.EmailsController = Ember.ArrayController.extend ({
       // this.set('subject', null),
       // this.set('message', null)
 
+    },
+    cancel: function() {
+      this.transitionToRoute('emails'),
+      this.set('isEmailing', false)
+
     }
   }
 });
