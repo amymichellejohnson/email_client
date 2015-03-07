@@ -27,9 +27,27 @@
 </div>
 
 <div class="container">
-  {{#each item in emails}}
-  <ul>
-    <li>{{item.to}}{{#link-to 'email' item.id}}{{item.subject}}{{/link-to}}</li>
-  </ul>
-  {{/each}}
+
+  <table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>Sent to</th>
+      <th>Subject</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      {{#each item in emails}}
+      <td> {{item.to}} </td>
+      {{#link-to 'email' item.id}}
+        <td>{{item.subject}}</td>
+      {{/link-to}}
+      {{/each}}
+    </tr>
+  </tbody>
+
+</table>
+
 </div>

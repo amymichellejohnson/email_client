@@ -1,5 +1,6 @@
 Email.Router.map(function() {
-  this.resource('folders', {path: '/'});
+  this.resource('folders');
   this.resource('folder', {path: 'folders/:folder_id'});
-  this.resource('email', {path: 'folders/:folder_id/:email_id'});
+  this.resource('emails', {path: '/'});
+  this.resource('email', {path: 'emails/:email_id'});
 });

@@ -3,7 +3,8 @@
 <head>
   <title>Email Client</title>
   <script src="libs/jquery-1.11.2.js"></script>
-  <script src="css/js/bootstrap.min.js"></script>
+  <script src="css/js/bootstrap.js"></script>
+  <script src="css/js/jasny-bootstrap.js"></script>
 
   <link href='http://fonts.googleapis.com/css?family=Caudex:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -25,18 +26,20 @@
   <script src="controllers/folders.js"></script>
   <script src="controllers/folder.js"></script>
   <script src="controllers/email.js"></script>
+  <script src="controllers/emails.js"></script>
 
 
   <script src="routes/folders.js"></script>
   <script src="routes/folder.js"></script>
   <script src="routes/email.js"></script>
+  <script src="routes/emails.js"></script>
 
 
   <script src="models/folder.js"></script>
   <script src="models/email.js"></script>
 
   <script>
-    EmberHandlebarsLoader.loadTemplates(['application','folders', 'folder', 'email']);
+    EmberHandlebarsLoader.loadTemplates(['application','emails','folders', 'folder', 'email']);
   </script>
 </head>
 <body>

@@ -1,10 +1,17 @@
-Email.EmailController = Ember.ObjectController.extend ({
+Email.EmailsController = Ember.ArrayController.extend ({
+  isEmailing: false,
   actions: {
+    compose: function() {
+      this.set('isEmailing', true)
+    },
     save: function() {
+      this.set('isEmailing', false)
+
       var email = this.store.createRecord('email', {
         to: this.get('to'),
         subject: this.get('subject'),
-        message: this.get('message')
+        message: this.get('message'),
+        date: new Date()
 
       });
       email.save();

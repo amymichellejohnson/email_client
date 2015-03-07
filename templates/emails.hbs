@@ -1,0 +1,48 @@
+<br>
+<button {{action 'compose'}} class="btn btn-primary">Compose New Email</button>
+{{#if isEmailing}}
+  <div class="container">
+    <form class="form-horizontal">
+      <fieldset>
+        <legend>New Message</legend>
+        <div class="form-group">
+          <label for="to" class="col-lg-2 control-label">To</label>
+          <div class="col-lg-10">
+            {{input type="text" class="form-control" id="to" value=to placeholder="Recipients"}}
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject" class="col-lg-2 control-label">Subject</label>
+          <div class="col-lg-10">
+            {{input type="text" class="form-control" id="subject" value=subject placeholder="Subject"}}
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="textArea" class="col-lg-2 control-label"></label>
+          <div class="col-lg-10">
+            {{textarea class="form-control" rows="3" value=message}}
+            <br>
+            <button class="btn btn-primary" {{action 'save'}}>Send</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+{{else}}
+
+  <div class="container">
+    <br>
+    <h2>Your Sent Box:</h2>
+    <table class="table table-striped table-bordered table-hover">
+      <thead>
+        <tr><th>Sent to</th><th>Subject</th><th>Date</th></tr>
+      </thead>
+      <tbody data-link="row" class="rowlink">
+        {{#each}}
+
+          <tr><td>{{to}}</td><td>{{#link-to 'email' id}}{{subject}}{{/link-to}}</td><td>{{date}}</td></tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+{{/if}}

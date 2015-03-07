@@ -1,2 +1,4 @@
 Email.ApplicationSerializer = DS.LSSerializer.extend();
-Email.ApplicationAdapter = DS.FixtureAdapter;
+Email.ApplicationAdapter = DS.LSAdapter.extend();
+
+// Email.ApplicationAdapter = DS.FixtureAdapter.extend();

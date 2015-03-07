@@ -4,9 +4,7 @@ Email.Folder = DS.Model.extend ({
 });
 
 
-
-Email.Folder.reopenClass({
-  FIXTURES: [
-    { id: 1, name: 'Sent', emails:[] }
-  ]
-});
+// 
+// Email.Folder.FIXTURES = [
+//     { id: 1, name: 'Sent', emails:[] }
+//   ];
